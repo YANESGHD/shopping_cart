@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import Cart from "./components/Cart/Cart";
@@ -31,7 +31,7 @@ function App() {
   }, [cart, dispatch]);
 
   return (
-    <Fragment>
+    <>
       {notification && (
         <Notification
           status={notification.status}
@@ -43,7 +43,7 @@ function App() {
         {showCart && <Cart />}
         <Products />
       </Layout>
-    </Fragment>
+    </>
   );
 }
 
