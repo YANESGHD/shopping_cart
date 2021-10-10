@@ -1,23 +1,23 @@
-import classes from "./Notification.module.css";
+import classes from './Notification.module.css'
 
 const Notification = ({ status, title, message }) => {
-  let specialClasses = "";
+  let specialClasses = ''
 
-  if (status === "error") {
-    specialClasses = classes.error;
+  if (status === 'error') {
+    specialClasses = classes.error
   }
-  if (status === "success") {
-    specialClasses = classes.success;
+  if (status === 'success') {
+    specialClasses = classes.success
   }
 
-  const cssClasses = `${classes.notification} ${specialClasses}`;
+  const cssClasses = `${classes.notification} ${specialClasses}`
 
   return (
     <section className={cssClasses}>
       <h2>{title}</h2>
       <p>{message}</p>
     </section>
-  );
-};
+  )
+}
 
-export default Notification;
+export default Notification
